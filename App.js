@@ -5,12 +5,13 @@ import HomeScreen from "./screens/HomeScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ProjectScreen from "./screens/ProjectScreen";
+import Colors from "./Colors";
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator sceneContainerStyle={{ backgroundColor: Colors.main }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}

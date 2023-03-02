@@ -71,7 +71,7 @@ export default function HomeScreen() {
         <View
           style={{
             borderRadius: 10,
-            backgroundColor: Colors.main,
+            backgroundColor: Colors.secondary,
             minHeight: 200,
             paddingHorizontal: 20,
             paddingVertical: 20,
@@ -81,8 +81,8 @@ export default function HomeScreen() {
         >
           <Text
             style={{
-              borderRadius: 10,
-              color: Colors.accent,
+              fontSize: 15,
+              color: Colors.main,
             }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
