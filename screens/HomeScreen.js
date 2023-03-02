@@ -27,8 +27,6 @@ export default function HomeScreen() {
             top: "10%",
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
-            // backgroundColor: "red",
             width: "100%",
             paddingHorizontal: 20,
           }}
@@ -37,14 +35,23 @@ export default function HomeScreen() {
             style={{
               alignItems: "center",
               verticalAlign: "middle",
-              fontSize: 20,
+              fontSize: 25,
               color: Colors.accent,
             }}
           >
             Ankur Vekariya
           </Text>
-
-          <Entypo name="menu" size={30} color={Colors.accent} />
+          <Text
+            style={{
+              alignItems: "baseline",
+              verticalAlign: "middle",
+              fontSize: 15,
+              color: Colors.accent,
+              top: "1%",
+            }}
+          >
+            (React Native Developer)
+          </Text>
         </View>
         <Image
           style={{ width: "100%", height: 500, opacity: 0.3 }}
