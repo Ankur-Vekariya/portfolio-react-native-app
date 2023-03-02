@@ -2,75 +2,105 @@ import { StatusBar } from "expo-status-bar";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Colors from "../Colors";
 import { FontAwesome } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function ProjectScreen() {
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <TouchableOpacity
-          style={styles.itemCard}
-          // onPress={() => navigation.navigate("Product")}
+      <View style={{ height: "50%" }}>
+        <View
+          style={{
+            position: "absolute",
+            top: "10%",
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            paddingHorizontal: 20,
+          }}
         >
-          <FontAwesome name="product-hunt" size={24} color="black" />
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>Products</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.itemCard, styles.shadowProp]}
-          // onPress={() => navigation.navigate("ProductList")}
-        >
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>All Products</Text>
-        </TouchableOpacity>
+          <Text
+            style={{
+              alignItems: "center",
+              verticalAlign: "middle",
+              fontSize: 25,
+              color: Colors.accent,
+            }}
+          >
+            Projects
+          </Text>
+        </View>
+        <Image
+          style={{
+            width: "100%",
+            height: 500,
+            opacity: 0.3,
+            resizeMode: "stretch",
+          }}
+          source={require("../assets/project.jpg")}
+        />
       </View>
       <View
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          borderRadius: 40,
+          backgroundColor: Colors.accent,
+          width: "100%",
+          height: "100%",
+          paddingHorizontal: 20,
+          paddingVertical: 20,
         }}
       >
-        <TouchableOpacity
-          style={[styles.itemCard, styles.shadowProp]}
-          onPress={() => navigation.navigate("Category")}
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
         >
-          <MaterialIcons name="category" size={24} color="black" />
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>Category</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.itemCard, styles.shadowProp]}
-          onPress={() => navigation.navigate("Tables")}
+          <TouchableOpacity
+            style={[styles.itemCard, styles.shadowProp]}
+            // onPress={() => navigation.navigate("Category")}
+          >
+            <Text style={{ fontSize: 18, marginLeft: 5 }}>Admin</Text>
+            <Text style={{ fontSize: 16, marginLeft: 5 }}>MERN stack</Text>
+
+            <AntDesign name="right" size={24} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.itemCard, styles.shadowProp]}
+            // onPress={() => navigation.navigate("Tables")}
+          >
+            <Text style={{ fontSize: 18, marginLeft: 5 }}>Verification</Text>
+            <Text style={{ fontSize: 16, marginLeft: 5 }}>MERN stack</Text>
+
+            <AntDesign name="right" size={24} color="black" />
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
         >
-          <MaterialIcons name="breakfast-dining" size={24} color="black" />
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>Tables</Text>
-        </TouchableOpacity>
-      </View>
-      <View
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
-        <TouchableOpacity
-          style={[styles.itemCard, styles.shadowProp]}
-          onPress={() => navigation.navigate("Floor")}
-        >
-          <MaterialIcons name="category" size={24} color="black" />
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>Floors</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.itemCard, styles.shadowProp]}
-          onPress={() => navigation.navigate("Tables")}
-        >
-          <MaterialIcons name="breakfast-dining" size={24} color="black" />
-          <Text style={{ fontSize: 18, marginLeft: 5 }}>Tables</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.itemCard, styles.shadowProp]}
+            // onPress={() => navigation.navigate("Category")}
+          >
+            <Text style={{ fontSize: 18, marginLeft: 5 }}>Portfolio</Text>
+            <Text style={{ fontSize: 16, marginLeft: 5 }}>Expo</Text>
+
+            <AntDesign name="right" size={24} color="black" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.itemCard, styles.shadowProp]}
+            // onPress={() => navigation.navigate("Tables")}
+          >
+            <Text style={{ fontSize: 18, marginLeft: 5 }}>E-Comm</Text>
+            <Text style={{ fontSize: 16, marginLeft: 5 }}>Expo</Text>
+
+            <AntDesign name="right" size={24} color="black" />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -98,10 +128,10 @@ const styles = StyleSheet.create({
     // marginBottom: 5,
   },
   itemCard: {
-    display: "flex",
-    flexDirection: "row",
+    // display: "flex",
+    // flexDirection: "row",
     // justifyContent: "space-between",
-    backgroundColor: Colors.accent,
+    backgroundColor: Colors.secondary,
     borderRadius: 15,
     paddingVertical: 20,
     paddingHorizontal: 20,
@@ -112,10 +142,29 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 3,
   },
-  shadowProp: {
-    // shadowColor: "black",
-    // shadowOffset: { width: -20, height: 10 },
-    // shadowOpacity: 1,
-    // shadowRadius: 3,
+  container: {
+    flex: 1,
+    backgroundColor: Colors.main,
+  },
+
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center",
   },
 });

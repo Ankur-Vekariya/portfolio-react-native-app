@@ -4,6 +4,7 @@ import { Text, View, StatusBar } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import ProjectScreen from "./screens/ProjectScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +16,12 @@ function MyTabs() {
         component={HomeScreen}
         options={{ headerShown: false }}
       />
-      {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
+
+      <Tab.Screen
+        name="Settings"
+        component={ProjectScreen}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   );
 }
